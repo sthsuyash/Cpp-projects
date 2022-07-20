@@ -1,2 +1,2 @@
-**/DSA/*.exe
-**/DSA/.vscode
+**/DSA/*/*.exe
+.vscode
