@@ -32,9 +32,9 @@ int main()
     {
         cout << endl
              << "Press for:" << endl
-             << "1) Insertion in the begining" << endl
-             << "2) Insertion in the specific position" << endl
-             << "3) Insertion in the end" << endl
+             << "1) Insertion in the begining." << endl
+             << "2) Insertion in the specific position." << endl
+             << "3) Insertion in the end." << endl
              << "4) Displaying the array." << endl;
         cin >> choice;
 
@@ -55,7 +55,7 @@ int main()
             // Insertion in the specific position
             cout << "Enter the number to be inserted: ";
             cin >> num;
-            cout << "Enter the position to be placed: ";
+            cout << "Enter the position: ";
             cin >> pos;
             pos--;
             for (int i = size; i > pos; i--)
@@ -74,7 +74,7 @@ int main()
             break;
 
         case 4:
-            cout << "Displaying output: " << endl;
+            cout << "Displaying array: " << endl;
             for (int i = 0; i < size; i++)
             {
                 cout << arr[i] << " ";
