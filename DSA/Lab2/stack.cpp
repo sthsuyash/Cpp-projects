@@ -148,6 +148,9 @@ int main()
     stack.peakOp(5);
     std::cout << std::endl;
     stack.stackTraversal();
+    std::cout << std::endl;
+    stack.makeEmpty();
+    stack.stackTraversal();
 
     return 0;
 }
