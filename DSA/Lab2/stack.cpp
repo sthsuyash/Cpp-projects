@@ -1,11 +1,11 @@
 #include <iostream>
 #include <array>
-// using namespace std;
+using namespace std;
 
 class Stack
 {
 private:
-    std::array<int, 20> arr;
+    array<int, 20> arr;
 
 public:
     int top;
@@ -16,7 +16,7 @@ public:
     void makeEmpty()
     {
         top = -1;
-        std::cout << "Stack Emptied." << std::endl;
+        cout << "Stack Emptied." << endl;
     }
 
     bool isOverFlow()
@@ -57,11 +57,11 @@ public:
         {
             top++;
             this->arr[top] = data;
-            std::cout << data << " pushed successfully!!" << std::endl;
+            cout << data << " pushed successfully!!" << endl;
         }
         else
         {
-            std::cout << "Stack Overflow. Cannot push data\b" << std::endl;
+            cout << "Stack Overflow. Cannot push data\b" << endl;
         }
     }
 
@@ -71,11 +71,11 @@ public:
         {
             int data = this->arr[top];
             top--;
-            std::cout << data << " popped successfully!!" << std::endl;
+            cout << data << " popped successfully!!" << endl;
         }
         else
         {
-            std::cout << "Pop operation unsuccessful!!" << std::endl;
+            cout << "Pop operation unsuccessful!!" << endl;
         }
     }
 
@@ -84,21 +84,27 @@ public:
         if (!isEmpty())
         {
             this->arr[top] = data;
-            std::cout << "Peak operation successful." << std::endl;
+            cout << "Peak operation successful." << endl;
         }
         else
         {
-            std::cout << "Peak operation unsuccessful!!" << std::endl;
+            cout << "Peak operation unsuccessful!!" << endl;
         }
     }
 
     void stackTraversal()
     {
-        std::cout << "Stack traversal from top to bottom:" << std::endl;
+        if (isEmpty())
+        {
+            cout << "Stack is Empty";
+            return;
+        }
+
+        cout << "Stack traversal from top to bottom:" << endl;
         int top_store = top;
         while (!isUnderFlow())
         {
-            std::cout << arr[top] << " ";
+            cout << arr[top] << " ";
             top--;
         }
         top = top_store;
@@ -108,12 +114,12 @@ public:
     {
         if (isEmpty())
         {
-            std::cout << "Stack is empty." << std::endl;
+            cout << "Stack is empty." << endl;
         }
         else
         {
-            std::cout << "Stack is not empty." << std::endl
-                      << "Top pointer: " << top << std::endl;
+            cout << "Stack is not empty." << endl
+                 << "Top pointer: " << top << endl;
         }
     }
 };
@@ -122,35 +128,60 @@ int main()
 {
     Stack stack;
 
-    // test cases
-    std::cout << std::endl;
-    stack.displayEmpty();
-    std::cout << std::endl;
-    stack.push(4);
-    std::cout << std::endl;
-    stack.stackTraversal();
-    std::cout << std::endl;
-    stack.pop();
-    std::cout << std::endl;
-    stack.stackTraversal();
-    std::cout << std::endl;
-    stack.push(1);
-    stack.push(2);
-    stack.push(3);
-    stack.push(4);
-    std::cout << std::endl;
-    stack.stackTraversal();
-    std::cout << std::endl;
-    stack.displayEmpty();
-    std::cout << std::endl;
-    std::cout << stack.get_top();
-    std::cout << std::endl;
-    stack.peakOp(5);
-    std::cout << std::endl;
-    stack.stackTraversal();
-    std::cout << std::endl;
-    stack.makeEmpty();
-    stack.stackTraversal();
+    cout << "Press the following for specific operations:" << endl;
+    cout << "1) Empty Stack." << endl;
+    cout << "2) Push operation." << endl;
+    cout << "3) Pop operation." << endl;
+    cout << "4) Peak operation." << endl;
+    cout << "5) Display item in stack." << endl;
+
+    int choice, data;
+    char ch;
+
+    do
+    {
+        cout << "Enter choice: ";
+        cin >> choice;
+        cout << endl;
+
+        switch (choice)
+        {
+        case 1:
+            stack.makeEmpty();
+            cout << endl;
+            break;
+
+        case 2:
+            cout << "Enter data to push: ";
+            cin >> data;
+            stack.push(data);
+            cout << endl;
+            break;
+
+        case 3:
+            stack.pop();
+            cout << endl;
+            break;
+
+        case 4:
+            cout << "Enter data for peak: ";
+            cin >> data;
+            stack.peakOp(data);
+            break;
+
+        case 5:
+            stack.stackTraversal();
+            cout << endl;
+            break;
+
+        default:
+            cout << "Please press valid option." << endl;
+            break;
+        }
+        cout << "Do you want to continue again(y/n)? ";
+        cin >> ch;
+
+    } while (ch == 'y');
 
     return 0;
 }
