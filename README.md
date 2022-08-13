@@ -6,5 +6,4 @@
 |  2  | [Number System Conversion](https://github.com/sthsuyash/Cpp-projects/tree/main/number-System-Conversions)|
 |  3  | [Binary Number Addition](https://github.com/sthsuyash/Cpp-projects/tree/main/binary-Additions)|
 |  4  | [Encryption Decryption](https://github.com/sthsuyash/Cpp-projects/tree/main/encryption)|
-|  5  | [Data Structure & Algorithms](https://github.com/sthsuyash/Cpp-projects/tree/main/DSA)|
-|  6  | [Practice](https://github.com/sthsuyash/Cpp-projects/tree/main/practice)|
+|  5  | [Practice](https://github.com/sthsuyash/Cpp-projects/tree/main/practice)|
