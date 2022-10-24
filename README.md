@@ -1,5 +1,9 @@
 # Cmd projects using C++
 
+## Description
+
+This repository contains the projects that I have done using C++.
+
 ## Projects                                                                                                       |
 
 - [Student Report Management](https://github.com/sthsuyash/Cpp-projects/tree/main/Student%20Report%20Management) |
